@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "AutoUpdater.Updater": {
+      "commandName": "Project",
+      "commandLineArgs": "-p 99123499 -pv 1.0.0"
+    }
+  }
+}

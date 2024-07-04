@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "AutoUpdater.PostBuild": {
+      "commandName": "Project",
+      "commandLineArgs": "-p 1.0.2 -r linux-x64"
+    }
+  }
+}
