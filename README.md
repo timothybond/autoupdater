@@ -28,7 +28,7 @@ The main executable also can take a single argument, "-n" or "--noupdate", to sk
 
 AutoUpdater.PostBuild has logic to create packages, including authoring the essential "current.json" file.
 
-There's a .bat file in AutoUpdater.Main that rebuilds the solution, publishes packages for each architecture, and runs AutoUpdater.PostBuild against them. When this is done, there will be a "packages" directory in AutoUpdater.Main\bin\Release\net8.0 that contains everything that needs to be uploaded to the repository.
+There's a Powershell script in AutoUpdater.Main that rebuilds the solution, publishes packages for each architecture, and runs AutoUpdater.PostBuild against them. When this is done, there will be a "packages" directory in AutoUpdater.Main\bin\Release\net8.0 that contains everything that needs to be uploaded to the repository.
 
 ## Hosted Packages
 
