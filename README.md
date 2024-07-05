@@ -47,9 +47,11 @@ This solution was build with the following assumptions:
 
 # Misc Notes
 
-## Manual vs. Automated Testing
+## Testing
 
-Normally I would never want to put together something like this (or, y'know, any code whatsoever) without automated tests. However, because this consists almost entirely of infrastructure stuff, and almost no self-contained logic, it would be a lot of additional work to put together tests for it, so I've relied on manual testing instead.
+Normally I would never want to put together something like this (or, y'know, any code whatsoever) without automated tests. However, because this consists almost entirely of infrastructure stuff, and almost no self-contained logic, it would be a lot of additional work to put together tests for it, so I've mostly relied on manual testing instead.
+
+There is a single integration test, which makes a copy of the current build, runs it, and makes sure it gets updated from 1.0.0.0 to 1.0.2.0. (Obviously this is a brittle test because it has both of the version numbers hardcoded. And relies on external resources.)
 
 If I were supporting this long-term, I would definitely want to put something together to ensure that it works and test some complex update scenarios (e.g., files not being used anymore, running a series of updates in a row), using Docker containers to ensure a clean environment each time. Also, several parts of the logic are already written against interfaces to make it easier to substitute alternate implementations for testing.
 
